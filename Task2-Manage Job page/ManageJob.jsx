@@ -112,6 +112,7 @@ export default class ManageJob extends React.Component {
         });
     }
 
+    
     handleItemClick(key) {
         this.setState(prevState => ({
             filter: Object.assign({}, prevState.filter, { [key]: !prevState.filter[key] }),

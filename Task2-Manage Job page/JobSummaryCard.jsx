@@ -15,6 +15,7 @@ export class JobSummaryCard extends React.Component {
         this.navigateToEditJob = this.navigateToEditJob.bind(this);
     }
 
+    //function to close the job
     selectJob(id) {
         var cookies = Cookies.get('talentAuthToken');
         var link = 'http://localhost:51689/listing/listing/closeJob';
@@ -40,12 +41,14 @@ export class JobSummaryCard extends React.Component {
         })
     }
 
+    //function to toggle the popup
     togglePopup() {
         this.setState(prevState => ({
             isPopupOpen: !prevState.isPopupOpen
         }));
     }
 
+    //function to navigate to edit job page
     navigateToEditJob(id) {
         this.props.history.push(`/EditJob/${id}`);
     }
